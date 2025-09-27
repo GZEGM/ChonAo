@@ -620,7 +620,7 @@
               // Hàng đầu tiên chứa tiêu đề
               const headers = json[0].map((h) => String(h).trim());
               const nameColumnIndex = headers.findIndex(
-                (h) => h === "Họ và tên"
+                (h) => h.toLowerCase() === "họ và tên".toLowerCase()
               );
 
               if (nameColumnIndex === -1) {
